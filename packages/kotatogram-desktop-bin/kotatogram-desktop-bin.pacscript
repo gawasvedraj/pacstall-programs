@@ -16,10 +16,6 @@ package()
   wget -q "${homepage}/raw/dev/Telegram/Resources/art/icon512.png"
   sudo install -Dm644 icon512.png "${pkgdir}/usr/share/pixmaps/kotatogram.png"
 
-  # Launcher
-  wget -q "https://raw.githubusercontent.com/kotatogram/kotatogram-desktop/k$pkgver/lib/xdg/kotatogramdesktop.desktop" -O ${pkgname}.desktop
-  sudo install -Dm644 kotatogram-desktop.desktop -t "${pkgdir}/usr/share/applications"
-
   # Binary
   sudo install -Dm755 "Kotatogram" "${pkgdir}/usr/bin/${gives}"
 }
