@@ -17,8 +17,8 @@ package()
   sudo install -Dm644 icon512.png "${pkgdir}/usr/share/pixmaps/64gram.png"
 
   # Launcher
-  wget -q "https://aur.archlinux.org/cgit/aur.git/plain/io.github.tdesktop_x64.TDesktop.desktop?h=64gram-desktop-bin" -O 64gram-desktop.desktop
-  sudo install -Dm644 64gram-desktop.desktop -t "${pkgdir}/usr/share/applications"
+  wget -q "https://aur.archlinux.org/cgit/aur.git/plain/io.github.tdesktop_x64.TDesktop.desktop?h=64gram-desktop-bin" -O ${pkgname}.desktop
+  sudo install -Dm644 ${pkgname}.desktop -t "${pkgdir}/usr/share/applications"
 
   # Binary
   sudo install -Dm755 "Telegram" "${pkgdir}/usr/bin/${gives}"
